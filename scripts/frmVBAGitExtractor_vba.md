@@ -2,7 +2,7 @@
 ## VBA Module: **[frmVBAGitExtractor](/scripts/frmVBAGitExtractor.vba "source is here")**
 ### Type: MSForm  
 
-This procedure list for repo (vbaGit_Word) was automatically created on 8/06/2017 10:43:47 by VBAGit.
+This procedure list for repo (vbaGit_Word) was automatically created on 8/06/2017 19:25:50 by VBAGit.
 For more information see the [desktop liberation site](http://ramblings.mcpher.com/Home/excelquirks/drivesdk/gettinggithubready "desktop liberation")
 
 Below is a section for each procedure in frmVBAGitExtractor
