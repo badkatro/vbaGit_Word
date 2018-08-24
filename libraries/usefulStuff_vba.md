@@ -2,7 +2,7 @@
 ## VBA Module: **[usefulStuff](/libraries/usefulStuff.vba "source is here")**
 ### Type: StdModule  
 
-This procedure list for repo (vbaGit_Word) was automatically created on 8/06/2017 19:25:49 by VBAGit.
+This procedure list for repo (vbaGit_Word) was automatically created on 24/08/2018 18:03:52 by VBAGit.
 For more information see the [desktop liberation site](http://ramblings.mcpher.com/Home/excelquirks/drivesdk/gettinggithubready "desktop liberation")
 
 Below is a section for each procedure in usefulStuff
