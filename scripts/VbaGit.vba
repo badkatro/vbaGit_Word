@@ -6,6 +6,128 @@ Option Explicit
 ' settings are in public var
 Dim VGSettings As cJobject
 
+Function getRepoStagingArea() As String
+
+Dim t As cJobject
+
+Set t = getVGSettings()
+
+getRepoStagingArea = t.cValue("EXTRACT.TO")
+
+End Function
+
+
+Public Sub export_AllForms_ofVBProject(VBProjectName As String)
+
+Dim doc As Document
+
+Set doc = getDocumentOfVBProject(VBProjectName)
+
+If Not doc Is Nothing Then
+    Call export_AllForms_ofDocument(doc)
+Else
+    Debug.Print "ExportAllForms_ofDocument: Could not retrieve doc for project " & VBProjectName
+    frmVBAGitExtractor.PrintToOutput ("ExportAllForms_ofDocument: Could not retrieve doc for project " & VBProjectName)
+    Exit Sub
+End If
+
+End Sub
+
+
+Function getDocumentOfVBProject(TargetVBProject As String) As Document
+
+
+If Documents.Count = 0 Then
+    Debug.Print "ExportAllForms: No document found, Exiting..."
+    frmVBAGitExtractor.PrintToOutput ("ExportAllForms: No document found, Exiting...")
+
+    Set getDocumentOfVBProject = Nothing
+    Exit Function
+End If
+
+Dim doc As Document
+
+For Each doc In Documents
+    
+    If doc.VBProject.name = TargetVBProject Then
+        Set getDocumentOfVBProject = doc
+        Exit Function
+    End If
+    
+Next doc
+
+End Function
+
+
+Public Sub export_AllForms_ofDocument(TargetDocument As Document)
+
+
+Dim ctVbProj As VBProject
+
+Set ctVbProj = TargetDocument.VBProject
+
+Debug.Print "ExportAllForms: Processing " & TargetDocument.name
+frmVBAGitExtractor.PrintToOutput ("ExportAllForms: Processing " & TargetDocument.name)
+
+
+If ctVbProj.VBComponents.Count > 0 Then
+    
+    Dim baseFolder As String
+    
+    'baseFolder = "C:\Users\" & Environ("Username") & "\Documents\vbaGit\Extraction\Scripts"
+    baseFolder = getRepoStagingArea
+    
+    If Dir(baseFolder & ctVbProj.name & "/" & "forms", vbDirectory) = "" Then
+                
+        Debug.Print "ExportAllForms: BaseFolder not found, Creating basefolder " & _
+            baseFolder & ctVbProj.name & "/" & "forms"
+        frmVBAGitExtractor.PrintToOutput ("ExportAllForms: BaseFolder not found, Creating basefolder " & _
+            baseFolder & ctVbProj.name & "/" & "forms")
+        
+        '/ Can only create one level of subfolders at one time /
+        If Dir(baseFolder & ctVbProj.name, vbDirectory) = "" Then
+            Call MkDir(baseFolder & ctVbProj.name)
+        End If
+        '/ One level only /
+        If Dir(baseFolder & ctVbProj.name & "/" & "forms", vbDirectory) = "" Then
+            Call MkDir(baseFolder & ctVbProj.name & "/" & "forms")
+        End If
+        
+        baseFolder = baseFolder & ctVbProj.name & "/" & "forms"
+        
+    Else
+    
+        baseFolder = baseFolder & ctVbProj.name & "/" & "forms"
+    
+    End If
+    
+    
+    Dim ctVbC As VBComponent
+    
+    
+    For Each ctVbC In ctVbProj.VBComponents
+        
+        If ctVbC.Type = vbext_ct_MSForm Then
+            
+            Debug.Print "ExportAllForms: Exporting UserForm " & ctVbC.name
+            frmVBAGitExtractor.PrintToOutput ("ExportAllForms: Exporting UserForm " & ctVbC.name)
+            
+            ctVbC.Export (baseFolder & "/" & ctVbC.name & ".vba")
+            
+        End If
+        
+    Next ctVbC
+    
+End If
+
+Debug.Print "ExportAllForms: All Done!"
+frmVBAGitExtractor.PrintToOutput ("ExportAllForms: All Done!")
+
+End Sub
+
+
+
+
 Public Sub Git_Repo(Reponame As String)
 
 Call doGit(Reponame)
@@ -66,13 +188,6 @@ Public Sub doEverything()
     
 End Sub
 
-Public Sub doGit_AssignDocuments()
-
-    ' now write them to git
-    doGit "FadoSorting"
-
-
-End Sub
 
 Public Sub doExtraction_AssignDocuments()
 
@@ -95,7 +210,7 @@ End Sub
 Public Sub doTheImport()
     ' this is the something I want to import into the companion workbook
     'doImportFromGit "cDataSet"
-    doImportFromGit "AssignDocuments", "AssignDocs_vbaGit"
+    doImportFromGit "gscA3_cmn", "gscA3_Recreated"
     ''doImportFromGit "cJobject"
     
 End Sub
@@ -160,7 +275,7 @@ End Sub
 ' */
 Private Function deleteThisAfterRunningOnce()
     ' substitute your git application clientid/secret
-    setGitBasicCredentials "badkatro", "Kocutel924"
+    setGitBasicCredentials "badkatro", "Kocutel#9288"
     setGitClientCredentials "d262dccbe1bfca75addf", "406871309200b1f271de90aafd4574ed046e9527"
 End Function
 '/*
