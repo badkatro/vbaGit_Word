@@ -2,7 +2,7 @@
 ## VBA Module: **[regXLib](/scripts/regXLib.vba "source is here")**
 ### Type: StdModule  
 
-This procedure list for repo (vbaGit_Word) was automatically created on 8/06/2017 10:43:46 by VBAGit.
+This procedure list for repo (vbaGit_Word) was automatically created on 24/08/2018 18:05:10 by VBAGit.
 For more information see the [desktop liberation site](http://ramblings.mcpher.com/Home/excelquirks/drivesdk/gettinggithubready "desktop liberation")
 
 Below is a section for each procedure in regXLib
