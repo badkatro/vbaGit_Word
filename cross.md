@@ -1,5 +1,5 @@
 # VBA Project: vbaGit_Word
-This cross reference list for repo (vbaGit_Word) was automatically created on 8/06/2017 19:25:51 by VBAGit.For more information see the [desktop liberation site](http://ramblings.mcpher.com/Home/excelquirks/drivesdk/gettinggithubready "desktop liberation")
+This cross reference list for repo (vbaGit_Word) was automatically created on 24/08/2018 18:03:54 by VBAGit.For more information see the [desktop liberation site](http://ramblings.mcpher.com/Home/excelquirks/drivesdk/gettinggithubready "desktop liberation")
 You can see [library and dependency information here](dependencies.md)
 
 ###Below is a cross reference showing which modules and procedures reference which others
@@ -42,8 +42,16 @@ usefulcJobject|JSONParse|VbaGit|doImportFromGit
 usefulcJobject|JSONParse|VbaGit|getAllInfoFiles
 usefulRegex|getRx|VbaGit|dependencyResolve
 usefulRegex|getTheEndRx|VbaGit|testmodulestuff
-usefulStuff|list|frmVBAGitExtractor|GetSelectedVBAComponents
-VbaGit|export_AllForms_ofVBProject|frmVBAGitExtractor|cmdExtractForms_Click
-VbaGit|extractVBComponents|frmVBAGitExtractor|cmdExtract_Click
-VbaGit|extractVBComponents|frmVBAGitExtractor|cmdExtrGit_Click
-VbaGit|Git_Repo|frmVBAGitExtractor|cmdGit_Click
+usefulStuff|Base64Encode|VbaGit|setGitClientCredentials
+usefulStuff|Base64Encode|VbaGit|setGitBasicCredentials
+usefulStuff|checkOrCreateFolder|VbaGit|writeInfoFile
+usefulStuff|conditionalAssignment|VbaGit|modulesToInfo
+usefulStuff|getAllSubFolderPaths|VbaGit|getAllInfoFiles
+usefulStuff|getTimestampFromDate|VbaGit|makeInfoFile
+usefulStuff|isSomething|VbaGit|getDependencyList
+usefulStuff|isSomething|VbaGit|dependencyResolve
+usefulStuff|isSomething|VbaGit|makeCrossReferenceJob
+usefulStuff|isSomething|VbaGit|createRepos
+usefulStuff|isUndefined|VbaGit|getVGSettings
+usefulStuff|readFromFolderFile|VbaGit|writeTheFiles
+usefulStuff|writeToFolderFile|VbaGit|writeToStagingArea
