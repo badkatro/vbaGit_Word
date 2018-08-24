@@ -2,7 +2,7 @@
 ## VBA Module: **[VbaGit](/scripts/VbaGit.vba "source is here")**
 ### Type: StdModule  
 
-This procedure list for repo (vbaGit_Word) was automatically created on 24/08/2018 18:03:53 by VBAGit.
+This procedure list for repo (vbaGit_Word) was automatically created on 24/08/2018 18:05:11 by VBAGit.
 For more information see the [desktop liberation site](http://ramblings.mcpher.com/Home/excelquirks/drivesdk/gettinggithubready "desktop liberation")
 
 Below is a section for each procedure in VbaGit
@@ -193,12 +193,12 @@ Description: **get the code from git for a particular module**
 
 *name*|*type*|*optional*|*default*|*description*
 ---|---|---|---|---
-project|[cJobject](/libraries/cJobject_cls.md "cJobject")|False||the project object
-git|[cVbaGit](/libraries/cVbaGit_cls.md "cVbaGit")|False||a handle to the cVbaGit object
+project|[cJobject](/scripts/cJobject_cls.md "cJobject")|False||the project object
+git|[cVbaGit](/scripts/cVbaGit_cls.md "cVbaGit")|False||a handle to the cVbaGit object
 folder|String|False||the folder to find the file in
-info|[cJobject](/libraries/cJobject_cls.md "cJobject")|False||
+info|[cJobject](/scripts/cJobject_cls.md "cJobject")|False||
 childName|String|False||the branch of the project to work from (scripts/libraries)
-repo|[cJobject](/libraries/cJobject_cls.md "cJobject")|False||the repo object containing this file
+repo|[cJobject](/scripts/cJobject_cls.md "cJobject")|False||the repo object containing this file
 
 
 ---
@@ -213,15 +213,15 @@ Description: **get the code from git for a particular module**
 
 *name*|*type*|*optional*|*default*|*description*
 ---|---|---|---|---
-project|[cJobject](/libraries/cJobject_cls.md "cJobject")|False||the project object
-infoItem|[cJobject](/libraries/cJobject_cls.md "cJobject")|False||the object from info.json for this file
+project|[cJobject](/scripts/cJobject_cls.md "cJobject")|False||the project object
+infoItem|[cJobject](/scripts/cJobject_cls.md "cJobject")|False||the object from info.json for this file
 code|String|False||the new code to use
 
 
 ---
 VBA Procedure: **getRepo**  
 Type: **Function**  
-Returns: **[cJobject](/libraries/cJobject_cls.md "cJobject")**  
+Returns: **[cJobject](/scripts/cJobject_cls.md "cJobject")**  
 Return description: **the repo object**  
 Scope: **Private**  
 Description: **get the code from git for a particular module**  
@@ -230,7 +230,7 @@ Description: **get the code from git for a particular module**
 
 *name*|*type*|*optional*|*default*|*description*
 ---|---|---|---|---
-git|[cVbaGit](/libraries/cVbaGit_cls.md "cVbaGit")|False||a cVbaGit handle
+git|[cVbaGit](/scripts/cVbaGit_cls.md "cVbaGit")|False||a cVbaGit handle
 Reponame|String|False||the name of the repo
 complain|Boolean|True| True|whether to complain on failure
 
@@ -283,7 +283,7 @@ specificRepoName|String|True| vbNullString|the name of the repo - if blank it wi
 ---
 VBA Procedure: **getAllTheRepos**  
 Type: **Function**  
-Returns: **[cJobject](/libraries/cJobject_cls.md "cJobject")**  
+Returns: **[cJobject](/scripts/cJobject_cls.md "cJobject")**  
 Return description: **all the known repos**  
 Scope: **Private**  
 Description: **get all known repos belonging to the git logged in individual**  
@@ -292,13 +292,13 @@ Description: **get all known repos belonging to the git logged in individual**
 
 *name*|*type*|*optional*|*default*|*description*
 ---|---|---|---|---
-git|[cVbaGit](/libraries/cVbaGit_cls.md "cVbaGit")|False||a handle to the cVbaGit api
+git|[cVbaGit](/scripts/cVbaGit_cls.md "cVbaGit")|False||a handle to the cVbaGit api
 
 
 ---
 VBA Procedure: **createRepos**  
 Type: **Function**  
-Returns: **[cJobject](/libraries/cJobject_cls.md "cJobject")**  
+Returns: **[cJobject](/scripts/cJobject_cls.md "cJobject")**  
 Return description: **all the known repos updated**  
 Scope: **Private**  
 Description: **create any repos in our list of info objects that don't exist**  
@@ -307,8 +307,8 @@ Description: **create any repos in our list of info objects that don't exist**
 
 *name*|*type*|*optional*|*default*|*description*
 ---|---|---|---|---
-git|[cVbaGit](/libraries/cVbaGit_cls.md "cVbaGit")|False||a handle to the cVbaGit api
-infos|[cJobject](/libraries/cJobject_cls.md "cJobject")|False||a list of info objects
+git|[cVbaGit](/scripts/cVbaGit_cls.md "cVbaGit")|False||a handle to the cVbaGit api
+infos|[cJobject](/scripts/cJobject_cls.md "cJobject")|False||a list of info objects
 
 
 ---
@@ -323,16 +323,16 @@ Description: ****
 
 *name*|*type*|*optional*|*default*|*description*
 ---|---|---|---|---
-git|[cVbaGit](/libraries/cVbaGit_cls.md "cVbaGit")|False||
+git|[cVbaGit](/scripts/cVbaGit_cls.md "cVbaGit")|False||
 kids|Collection|False||
 folderName|String|False||
-repo|[cJobject](/libraries/cJobject_cls.md "cJobject")|False||
+repo|[cJobject](/scripts/cJobject_cls.md "cJobject")|False||
 
 
 ---
 VBA Procedure: **writeTheFiles**  
 Type: **Function**  
-Returns: **[cJobject](/libraries/cJobject_cls.md "cJobject")**  
+Returns: **[cJobject](/scripts/cJobject_cls.md "cJobject")**  
 Return description: ****  
 Scope: **Private**  
 Description: ****  
@@ -341,16 +341,16 @@ Description: ****
 
 *name*|*type*|*optional*|*default*|*description*
 ---|---|---|---|---
-git|[cVbaGit](/libraries/cVbaGit_cls.md "cVbaGit")|False||
+git|[cVbaGit](/scripts/cVbaGit_cls.md "cVbaGit")|False||
 fileId|String|False||
 fileName|String|False||
-repo|[cJobject](/libraries/cJobject_cls.md "cJobject")|False||
+repo|[cJobject](/scripts/cJobject_cls.md "cJobject")|False||
 
 
 ---
 VBA Procedure: **getAllInfoFiles**  
 Type: **Function**  
-Returns: **[cJobject](/libraries/cJobject_cls.md "cJobject")**  
+Returns: **[cJobject](/scripts/cJobject_cls.md "cJobject")**  
 Return description: ****  
 Scope: **Private**  
 Description: ****  
@@ -365,7 +365,7 @@ specificRepoName|String|True| vbNullString|
 ---
 VBA Procedure: **writeInfoFile**  
 Type: **Function**  
-Returns: **[cJobject](/libraries/cJobject_cls.md "cJobject")**  
+Returns: **[cJobject](/scripts/cJobject_cls.md "cJobject")**  
 Return description: ****  
 Scope: **Private**  
 Description: ****  
@@ -374,10 +374,10 @@ Description: ****
 
 *name*|*type*|*optional*|*default*|*description*
 ---|---|---|---|---
-project|[cJobject](/libraries/cJobject_cls.md "cJobject")|False||
-infoJob|[cJobject](/libraries/cJobject_cls.md "cJobject")|False||
-cross|[cJobject](/libraries/cJobject_cls.md "cJobject")|True| Nothing|
-dependencyList|[cJobject](/libraries/cJobject_cls.md "cJobject")|True| Nothing|
+project|[cJobject](/scripts/cJobject_cls.md "cJobject")|False||
+infoJob|[cJobject](/scripts/cJobject_cls.md "cJobject")|False||
+cross|[cJobject](/scripts/cJobject_cls.md "cJobject")|True| Nothing|
+dependencyList|[cJobject](/scripts/cJobject_cls.md "cJobject")|True| Nothing|
 
 
 ---
@@ -392,14 +392,14 @@ Description: ****
 
 *name*|*type*|*optional*|*default*|*description*
 ---|---|---|---|---
-infoJob|[cJobject](/libraries/cJobject_cls.md "cJobject")|False||
-dependencyList|[cJobject](/libraries/cJobject_cls.md "cJobject")|False||
+infoJob|[cJobject](/scripts/cJobject_cls.md "cJobject")|False||
+dependencyList|[cJobject](/scripts/cJobject_cls.md "cJobject")|False||
 
 
 ---
 VBA Procedure: **getDependencyList**  
 Type: **Function**  
-Returns: **[cJobject](/libraries/cJobject_cls.md "cJobject")**  
+Returns: **[cJobject](/scripts/cJobject_cls.md "cJobject")**  
 Return description: ****  
 Scope: **Private**  
 Description: ****  
@@ -408,7 +408,7 @@ Description: ****
 
 *name*|*type*|*optional*|*default*|*description*
 ---|---|---|---|---
-project|[cJobject](/libraries/cJobject_cls.md "cJobject")|False||
+project|[cJobject](/scripts/cJobject_cls.md "cJobject")|False||
 name|String|False||
 optListOfModules|String|True| vbNullString|
 
@@ -416,7 +416,7 @@ optListOfModules|String|True| vbNullString|
 ---
 VBA Procedure: **findProc**  
 Type: **Function**  
-Returns: **[cVBAProcedure](/libraries/cVBAProcedure_cls.md "cVBAProcedure")**  
+Returns: **[cVBAProcedure](/scripts/cVBAProcedure_cls.md "cVBAProcedure")**  
 Return description: ****  
 Scope: **Private**  
 Description: ****  
@@ -432,7 +432,7 @@ targetName|String|False||
 ---
 VBA Procedure: **dependencyResolve**  
 Type: **Function**  
-Returns: **[cJobject](/libraries/cJobject_cls.md "cJobject")**  
+Returns: **[cJobject](/scripts/cJobject_cls.md "cJobject")**  
 Return description: ****  
 Scope: **Private**  
 Description: ****  
@@ -441,14 +441,14 @@ Description: ****
 
 *name*|*type*|*optional*|*default*|*description*
 ---|---|---|---|---
-modules|[cJobject](/libraries/cJobject_cls.md "cJobject")|False||
-dependencyList|[cJobject](/libraries/cJobject_cls.md "cJobject")|False||
+modules|[cJobject](/scripts/cJobject_cls.md "cJobject")|False||
+dependencyList|[cJobject](/scripts/cJobject_cls.md "cJobject")|False||
 
 
 ---
 VBA Procedure: **getPosProc**  
 Type: **Function**  
-Returns: **[cJobject](/libraries/cJobject_cls.md "cJobject")**  
+Returns: **[cJobject](/scripts/cJobject_cls.md "cJobject")**  
 Return description: ****  
 Scope: **Private**  
 Description: **get the pos object the the procedure that provoked ths dependency**  
@@ -457,14 +457,14 @@ Description: **get the pos object the the procedure that provoked ths dependency
 
 *name*|*type*|*optional*|*default*|*description*
 ---|---|---|---|---
-pos|[cJobject](/libraries/cJobject_cls.md "cJobject")|False||the position object for all the code of this module
+pos|[cJobject](/scripts/cJobject_cls.md "cJobject")|False||the position object for all the code of this module
 matchOb|match|False||the regex match that found this dependency
 
 
 ---
 VBA Procedure: **makeCrossReferenceJob**  
 Type: **Function**  
-Returns: **[cJobject](/libraries/cJobject_cls.md "cJobject")**  
+Returns: **[cJobject](/scripts/cJobject_cls.md "cJobject")**  
 Return description: ****  
 Scope: **Private**  
 Description: ****  
@@ -473,7 +473,7 @@ Description: ****
 
 *name*|*type*|*optional*|*default*|*description*
 ---|---|---|---|---
-dependencyList|[cJobject](/libraries/cJobject_cls.md "cJobject")|False||
+dependencyList|[cJobject](/scripts/cJobject_cls.md "cJobject")|False||
 
 
 ---
@@ -488,8 +488,8 @@ Description: ****
 
 *name*|*type*|*optional*|*default*|*description*
 ---|---|---|---|---
-project|[cJobject](/libraries/cJobject_cls.md "cJobject")|False||
-references|[cJobject](/libraries/cJobject_cls.md "cJobject")|False||
+project|[cJobject](/scripts/cJobject_cls.md "cJobject")|False||
+references|[cJobject](/scripts/cJobject_cls.md "cJobject")|False||
 
 
 ---
@@ -504,14 +504,14 @@ Description: ****
 
 *name*|*type*|*optional*|*default*|*description*
 ---|---|---|---|---
-project|[cJobject](/libraries/cJobject_cls.md "cJobject")|False||
-job|[cJobject](/libraries/cJobject_cls.md "cJobject")|False||
+project|[cJobject](/scripts/cJobject_cls.md "cJobject")|False||
+job|[cJobject](/scripts/cJobject_cls.md "cJobject")|False||
 
 
 ---
 VBA Procedure: **makeExcelReferences**  
 Type: **Function**  
-Returns: **[cJobject](/libraries/cJobject_cls.md "cJobject")**  
+Returns: **[cJobject](/scripts/cJobject_cls.md "cJobject")**  
 Return description: ****  
 Scope: **Private**  
 Description: ****  
@@ -520,8 +520,8 @@ Description: ****
 
 *name*|*type*|*optional*|*default*|*description*
 ---|---|---|---|---
-project|[cVBAProject](/libraries/cVBAProject_cls.md "cVBAProject")|False||
-addHere|[cJobject](/libraries/cJobject_cls.md "cJobject")|False||
+project|[cVBAProject](/scripts/cVBAProject_cls.md "cVBAProject")|False||
+addHere|[cJobject](/scripts/cJobject_cls.md "cJobject")|False||
 
 
 ---
@@ -542,7 +542,7 @@ ob|Object|False||
 ---
 VBA Procedure: **getVbaAsJobject**  
 Type: **Function**  
-Returns: **[cJobject](/libraries/cJobject_cls.md "cJobject")**  
+Returns: **[cJobject](/scripts/cJobject_cls.md "cJobject")**  
 Return description: ****  
 Scope: **Private**  
 Description: ****  
@@ -557,7 +557,7 @@ optProjectName|String|True| vbNullString|
 ---
 VBA Procedure: **blowProcedures**  
 Type: **Function**  
-Returns: **[cJobject](/libraries/cJobject_cls.md "cJobject")**  
+Returns: **[cJobject](/scripts/cJobject_cls.md "cJobject")**  
 Return description: ****  
 Scope: **Private**  
 Description: ****  
@@ -566,13 +566,13 @@ Description: ****
 
 *name*|*type*|*optional*|*default*|*description*
 ---|---|---|---|---
-module|[cJobject](/libraries/cJobject_cls.md "cJobject")|False||
+module|[cJobject](/scripts/cJobject_cls.md "cJobject")|False||
 
 
 ---
 VBA Procedure: **blowArguments**  
 Type: **Function**  
-Returns: **[cJobject](/libraries/cJobject_cls.md "cJobject")**  
+Returns: **[cJobject](/scripts/cJobject_cls.md "cJobject")**  
 Return description: ****  
 Scope: **Private**  
 Description: ****  
@@ -581,14 +581,14 @@ Description: ****
 
 *name*|*type*|*optional*|*default*|*description*
 ---|---|---|---|---
-pob|[cVBAProcedure](/libraries/cVBAProcedure_cls.md "cVBAProcedure")|False||
-argOb|[cJobject](/libraries/cJobject_cls.md "cJobject")|False||
+pob|[cVBAProcedure](/scripts/cVBAProcedure_cls.md "cVBAProcedure")|False||
+argOb|[cJobject](/scripts/cJobject_cls.md "cJobject")|False||
 
 
 ---
 VBA Procedure: **getProjects**  
 Type: **Function**  
-Returns: **[cJobject](/libraries/cJobject_cls.md "cJobject")**  
+Returns: **[cJobject](/scripts/cJobject_cls.md "cJobject")**  
 Return description: ****  
 Scope: **Private**  
 Description: ****  
@@ -612,13 +612,13 @@ Description: ****
 
 *name*|*type*|*optional*|*default*|*description*
 ---|---|---|---|---
-module|[cJobject](/libraries/cJobject_cls.md "cJobject")|False||
+module|[cJobject](/scripts/cJobject_cls.md "cJobject")|False||
 
 
 ---
 VBA Procedure: **getmoduleList**  
 Type: **Function**  
-Returns: **[cJobject](/libraries/cJobject_cls.md "cJobject")**  
+Returns: **[cJobject](/scripts/cJobject_cls.md "cJobject")**  
 Return description: ****  
 Scope: **Private**  
 Description: ****  
@@ -627,13 +627,13 @@ Description: ****
 
 *name*|*type*|*optional*|*default*|*description*
 ---|---|---|---|---
-project|[cJobject](/libraries/cJobject_cls.md "cJobject")|False||
+project|[cJobject](/scripts/cJobject_cls.md "cJobject")|False||
 
 
 ---
 VBA Procedure: **makeInfoFile**  
 Type: **Function**  
-Returns: **[cJobject](/libraries/cJobject_cls.md "cJobject")**  
+Returns: **[cJobject](/scripts/cJobject_cls.md "cJobject")**  
 Return description: ****  
 Scope: **Private**  
 Description: ****  
@@ -642,14 +642,14 @@ Description: ****
 
 *name*|*type*|*optional*|*default*|*description*
 ---|---|---|---|---
-project|[cJobject](/libraries/cJobject_cls.md "cJobject")|False||
-dependencyList|[cJobject](/libraries/cJobject_cls.md "cJobject")|False||
+project|[cJobject](/scripts/cJobject_cls.md "cJobject")|False||
+dependencyList|[cJobject](/scripts/cJobject_cls.md "cJobject")|False||
 
 
 ---
 VBA Procedure: **modulesToInfo**  
 Type: **Function**  
-Returns: **[cJobject](/libraries/cJobject_cls.md "cJobject")**  
+Returns: **[cJobject](/scripts/cJobject_cls.md "cJobject")**  
 Return description: ****  
 Scope: **Private**  
 Description: ****  
@@ -658,8 +658,8 @@ Description: ****
 
 *name*|*type*|*optional*|*default*|*description*
 ---|---|---|---|---
-moduleJob|[cJobject](/libraries/cJobject_cls.md "cJobject")|False||
-infoJob|[cJobject](/libraries/cJobject_cls.md "cJobject")|False||
+moduleJob|[cJobject](/scripts/cJobject_cls.md "cJobject")|False||
+infoJob|[cJobject](/scripts/cJobject_cls.md "cJobject")|False||
 extract|String|False||
 folderName|String|False||
 
@@ -689,8 +689,8 @@ Description: ****
 
 *name*|*type*|*optional*|*default*|*description*
 ---|---|---|---|---
-cross|[cJobject](/libraries/cJobject_cls.md "cJobject")|False||
-info|[cJobject](/libraries/cJobject_cls.md "cJobject")|False||
+cross|[cJobject](/scripts/cJobject_cls.md "cJobject")|False||
+info|[cJobject](/scripts/cJobject_cls.md "cJobject")|False||
 
 
 ---
@@ -705,7 +705,7 @@ Description: ****
 
 *name*|*type*|*optional*|*default*|*description*
 ---|---|---|---|---
-info|[cJobject](/libraries/cJobject_cls.md "cJobject")|False||
+info|[cJobject](/scripts/cJobject_cls.md "cJobject")|False||
 
 
 ---
@@ -720,8 +720,8 @@ Description: ****
 
 *name*|*type*|*optional*|*default*|*description*
 ---|---|---|---|---
-project|[cJobject](/libraries/cJobject_cls.md "cJobject")|False||
-info|[cJobject](/libraries/cJobject_cls.md "cJobject")|False||
+project|[cJobject](/scripts/cJobject_cls.md "cJobject")|False||
+info|[cJobject](/scripts/cJobject_cls.md "cJobject")|False||
 
 
 ---
@@ -754,8 +754,8 @@ Description: ****
 
 *name*|*type*|*optional*|*default*|*description*
 ---|---|---|---|---
-modl|[cVBAmodule](/libraries/cVBAmodule_cls.md "cVBAmodule")|False||
-info|[cJobject](/libraries/cJobject_cls.md "cJobject")|False||
+modl|[cVBAmodule](/scripts/cVBAmodule_cls.md "cVBAmodule")|False||
+info|[cJobject](/scripts/cJobject_cls.md "cJobject")|False||
 
 
 ---
@@ -771,7 +771,7 @@ Description: ****
 *name*|*type*|*optional*|*default*|*description*
 ---|---|---|---|---
 modlName|String|False||
-info|[cJobject](/libraries/cJobject_cls.md "cJobject")|False||
+info|[cJobject](/scripts/cJobject_cls.md "cJobject")|False||
 hover|String|True| vbNullString|
 fn|String|True| "docsName"|
 
