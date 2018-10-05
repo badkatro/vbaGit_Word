@@ -2,7 +2,7 @@
 ## VBA Module: **[usefulRegex](/scripts/usefulRegex.vba "source is here")**
 ### Type: StdModule  
 
-This procedure list for repo (vbaGit_Word) was automatically created on 05/10/2018 17:48:06 by VBAGit.
+This procedure list for repo (vbaGit_Word) was automatically created  by VBAGit.
 For more information see the [desktop liberation site](http://ramblings.mcpher.com/Home/excelquirks/drivesdk/gettinggithubready "desktop liberation")
 
 Below is a section for each procedure in usefulRegex
