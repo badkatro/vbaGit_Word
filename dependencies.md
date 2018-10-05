@@ -1,5 +1,5 @@
 # VBA Project: vbaGit_Word
-This repo (vbaGit_Word) was automatically created on 24/08/2018 18:05:12 by VBAGit.For more information see the [desktop liberation site](http://ramblings.mcpher.com/Home/excelquirks/drivesdk/gettinggithubready "desktop liberation") or [contact me on G+](https://plus.google.com/+BruceMcpherson "Bruce McPherson - GDE")  
+This repo (vbaGit_Word) was automatically created on 05/10/2018 17:48:08 by VBAGit.For more information see the [desktop liberation site](http://ramblings.mcpher.com/Home/excelquirks/drivesdk/gettinggithubready "desktop liberation") or [contact me on G+](https://plus.google.com/+BruceMcpherson "Bruce McPherson - GDE")  
 ## Details for VBA project vbaGit_Word
 Where possibile directly referenced or sub referenced library sources have been copied to this repository  
 ### Modules of vbaGit_Word included in this repo
@@ -12,7 +12,6 @@ usefulRegex|StdModule|[usefulRegex.vba](scripts/usefulRegex.vba "script source")
 usefulStuff|StdModule|[usefulStuff.vba](scripts/usefulStuff.vba "script source")|[usefulStuff_vba.md](scripts/usefulStuff_vba.md "script docs")  
 VbaGit|StdModule|[VbaGit.vba](scripts/VbaGit.vba "script source")|[VbaGit_vba.md](scripts/VbaGit_vba.md "script docs")  
 Module1|StdModule|[Module1.vba](scripts/Module1.vba "script source")|[Module1_vba.md](scripts/Module1_vba.md "script docs")  
-frmVBAGitExtractor|MSForm|[frmVBAGitExtractor.vba](scripts/frmVBAGitExtractor.vba "script source")|[frmVBAGitExtractor_vba.md](scripts/frmVBAGitExtractor_vba.md "script docs")  
 cJobject|ClassModule|[cJobject.cls](scripts/cJobject.cls "script source")|[cJobject_cls.md](scripts/cJobject_cls.md "script docs")  
 cregXLib|ClassModule|[cregXLib.cls](scripts/cregXLib.cls "script source")|[cregXLib_cls.md](scripts/cregXLib_cls.md "script docs")  
 cStringChunker|ClassModule|[cStringChunker.cls](scripts/cStringChunker.cls "script source")|[cStringChunker_cls.md](scripts/cStringChunker_cls.md "script docs")  
