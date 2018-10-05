@@ -1630,7 +1630,7 @@ Private Function makeArguments(modl As cVBAmodule, info As cJobject) As String
     c.add("## VBA Module: **").add(findModLink(modl.name, info, "source is here", "fileName")).addLine ("**")
     c.add("### Type: ").add(modl.textKind).add("  ").addLines (2)
     c.add("This procedure list for repo (").add (info.toString("repo"))
-    c.add(") was automatically created on ").add(CStr(Now())).addLine (" by VBAGit.")
+    c.add(") was automatically created on ").addLine (" by VBAGit.")
     c.addLine ("For more information see the [desktop liberation site](http://ramblings.mcpher.com/Home/excelquirks/drivesdk/gettinggithubready ""desktop liberation"")")
     c.addLine.add("Below is a section for each procedure in ").add (modl.name)
 
