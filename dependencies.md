@@ -1,5 +1,5 @@
 # VBA Project: vbaGit_Word
-This repo (vbaGit_Word) was automatically created on 05/10/2018 17:48:08 by VBAGit.For more information see the [desktop liberation site](http://ramblings.mcpher.com/Home/excelquirks/drivesdk/gettinggithubready "desktop liberation") or [contact me on G+](https://plus.google.com/+BruceMcpherson "Bruce McPherson - GDE")  
+This repo (vbaGit_Word) was automatically created  by VBAGit.For more information see the [desktop liberation site](http://ramblings.mcpher.com/Home/excelquirks/drivesdk/gettinggithubready "desktop liberation") or [contact me on G+](https://plus.google.com/+BruceMcpherson "Bruce McPherson - GDE")  
 ## Details for VBA project vbaGit_Word
 Where possibile directly referenced or sub referenced library sources have been copied to this repository  
 ### Modules of vbaGit_Word included in this repo
