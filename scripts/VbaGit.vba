@@ -1459,7 +1459,7 @@ Private Function makeCross(cross As cJobject, info As cJobject) As String
     Set c = New cStringChunker
     
     c.add("# VBA Project: ").addLine (info.toString("title"))
-    c.add("This cross reference list for repo (").add(info.toString("repo")).add(") was automatically created on ").add(CStr(Now())).add (" by VBAGit.")
+    c.add("This cross reference list for repo (").add(info.toString("repo")).add(") was automatically created ").add (" by VBAGit.")
     c.addLine ("For more information see the [desktop liberation site](http://ramblings.mcpher.com/Home/excelquirks/drivesdk/gettinggithubready ""desktop liberation"")")
     c.add ("You can see [library and dependency information here](")
     c.add(getVGSettings().toString("FILES.DEPENDENCIES")).addLine(")").addLine ("")
@@ -1508,7 +1508,7 @@ Private Function makeReadMe(info As cJobject) As String
     Set c = New cStringChunker
     
     c.add("# VBA Project: ").addLine (info.toString("title"))
-    c.add("This repo (").add(info.toString("repo")).add(") was automatically created on ").add(CStr(Now())).add (" by VBAGit.")
+    c.add("This repo (").add(info.toString("repo")).add(") was automatically created ").add (" by VBAGit.")
     c.addLine ("For more information see the [desktop liberation site](http://ramblings.mcpher.com/Home/excelquirks/drivesdk/vbagit ""desktop liberation"")")
     c.add ("you can see [library and dependency information here](")
     c.add(getVGSettings().toString("FILES.DEPENDENCIES")).addLine(")").addLine ("")
@@ -1528,8 +1528,8 @@ Private Function makeDependency(project As cJobject, info As cJobject) As String
     Set c = New cStringChunker
     
     c.add("# VBA Project: ").addLine (info.toString("title"))
-    c.add("This repo (").add(info.toString("repo")).add (") was automatically created on ")
-    c.add(CStr(Now())).add (" by VBAGit.")
+    c.add("This repo (").add(info.toString("repo")).add (") was automatically created ")
+    c.add (" by VBAGit.")
     c.add ("For more information see the [desktop liberation site](http://ramblings.mcpher.com/Home/excelquirks/drivesdk/gettinggithubready ""desktop liberation"")")
     c.add (" or [contact me on G+](https://plus.google.com/+BruceMcpherson ""Bruce McPherson - GDE"")")
     c.add (mdWrap)
@@ -1630,7 +1630,7 @@ Private Function makeArguments(modl As cVBAmodule, info As cJobject) As String
     c.add("## VBA Module: **").add(findModLink(modl.name, info, "source is here", "fileName")).addLine ("**")
     c.add("### Type: ").add(modl.textKind).add("  ").addLines (2)
     c.add("This procedure list for repo (").add (info.toString("repo"))
-    c.add(") was automatically created on ").addLine (" by VBAGit.")
+    c.add(") was automatically created ").addLine (" by VBAGit.")
     c.addLine ("For more information see the [desktop liberation site](http://ramblings.mcpher.com/Home/excelquirks/drivesdk/gettinggithubready ""desktop liberation"")")
     c.addLine.add("Below is a section for each procedure in ").add (modl.name)
 
