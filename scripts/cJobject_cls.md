@@ -2,7 +2,7 @@
 ## VBA Module: **[cJobject](/scripts/cJobject.cls "source is here")**
 ### Type: ClassModule  
 
-This procedure list for repo (vbaGit_Word) was automatically created on 05/10/2018 17:48:07 by VBAGit.
+This procedure list for repo (vbaGit_Word) was automatically created  by VBAGit.
 For more information see the [desktop liberation site](http://ramblings.mcpher.com/Home/excelquirks/drivesdk/gettinggithubready "desktop liberation")
 
 Below is a section for each procedure in cJobject
